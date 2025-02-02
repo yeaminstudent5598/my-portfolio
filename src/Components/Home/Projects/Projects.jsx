@@ -25,7 +25,7 @@ const Projects = () => {
         { name: "DaisyUI", icon: <SiDaisyui /> },
       ],
       link: "https://crowdcube-1ddbb.web.app/",
-      repo: "https://github.com/programming-hero-web-course2/b10-a10-client-side-yeaminstudent5598.git",
+      repo: "https://github.com/yeaminstudent5598/Crowd-funding-client-side",
       image: "https://i.ibb.co.com/xmTJSgJ/Screenshot-62.png",
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
         { name: "DaisyUI", icon: <SiDaisyui /> },
       ],
       link: "https://task-hub-e1fcb.web.app/",
-      repo: "https://github.com/programming-hero-web-course2/b10a11-client-side-yeaminstudent5598",
+      repo: "https://github.com/yeaminstudent5598/task-hub-client-side",
       image: "https://i.ibb.co.com/RNB7gcg/Screenshot-61.png",
     },
     {
@@ -55,7 +55,7 @@ const Projects = () => {
         { name: "DaisyUI", icon: <SiDaisyui /> },
       ],
       link: "https://gadgets-haven-5598.surge.sh",
-      repo: "https://github.com/username/gadgets-haven",
+      repo: "https://github.com/yeaminstudent5598/Gadget-Haven",
       image: "https://i.ibb.co.com/ww2g08B/Screenshot-60.png",
     },
   ];

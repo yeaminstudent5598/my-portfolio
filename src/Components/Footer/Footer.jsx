@@ -39,10 +39,10 @@ const Footer = () => {
             <a href="https://twitter.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
               <FaTwitter size={28} />
             </a>
-            <a href="https://linkedin.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/yeamin-madbor-83b3302b8/" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={28} />
             </a>
-            <a href="https://github.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/yeaminstudent5598" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
               <FaGithub size={28} />
             </a>
             <a href="https://instagram.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">

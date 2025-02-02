@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
     FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaFire, 
-    FaFigma, FaCode 
+    FaFigma, FaCode, FaWordpress 
 } from 'react-icons/fa';
 import { 
     SiJavascript, SiMongodb, SiExpress, 
@@ -25,10 +25,11 @@ const Skills = () => {
         { name: 'VS Code', level: 'Expert', icon: <FaCode className="text-blue-600 text-5xl mb-4" /> },
         { name: 'Framer Motion', level: 'Advanced', icon: <SiFramer className="text-pink-500 text-5xl mb-4" /> },
         { name: 'Pixso', level: 'Advanced', icon: <FaFigma className="text-green-500 text-5xl mb-4" /> },
+        { name: 'WordPress', level: 'Advanced', icon: <FaWordpress className="text-blue-700 text-5xl mb-4" /> },
     ];
 
     return (
-        <div className="bg-gray-900 py-16 px-6 md:px-12">
+        <div className="bg-gray-900 pt-32 py-16 px-6 md:px-12">
             <div className="text-center">
                 <h2 className="text-4xl text-white font-bold mb-8">My Skills</h2>
                 <div className="grid place-items-center">

@@ -24,7 +24,7 @@ const AboutMe = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    Hi, I’m <span className="text-blue-500 font-bold">Yami</span>! I’m a passionate and creative{" "}
+                    Hi, I’m <span className="text-blue-500 font-bold">Yeamin</span>! I’m a passionate and creative{" "}
                     <span className="text-blue-500">web developer</span> specializing in{" "}
                     <span className="font-medium">React</span>, <span className="font-medium">Firebase</span>, and{" "}
                     <span className="font-medium">Node.js</span>. With a strong focus on crafting clean, user-friendly

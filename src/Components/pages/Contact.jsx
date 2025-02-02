@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';  // Import emailjs-com
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2'; // Import SweetAlert2
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,18 +21,42 @@ const Contact = () => {
     e.preventDefault();
 
     // Send email using EmailJS
-    emailjs.sendForm(
-      "service_knjtvvc",   // Replace with your EmailJS Service ID
-      "template_81873ly",  // Replace with your EmailJS Template ID
-      e.target,
-      "Cf9vEJJhpfRuNXCXs"    // Replace with your EmailJS Public Key
-    )
-    .then((result) => {
-      console.log("Email sent successfully!");
-    })
-    .catch((error) => {
-      console.error("Failed to send email:", error);
-    });
+    emailjs
+      .sendForm(
+        "service_knjtvvc", // Replace with your EmailJS Service ID
+        "template_81873ly", // Replace with your EmailJS Template ID
+        e.target,
+        "Cf9vEJJhpfRuNXCXs" // Replace with your EmailJS Public Key
+      )
+      .then((result) => {
+       
+
+        // Show SweetAlert success message
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Your message has been sent successfully. I will get back to you soon.',
+          confirmButtonColor: '#3085d6'
+        });
+
+        // Reset form data
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+      
+
+        // Show SweetAlert error message
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: 'Something went wrong. Please try again later.',
+          confirmButtonColor: '#d33'
+        });
+      });
   };
 
   return (
