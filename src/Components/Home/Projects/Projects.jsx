@@ -37,20 +37,20 @@ const Projects = () => {
       image: "https://i.ibb.co.com/RNB7gcg/Screenshot-61.png",
     },
     {
-      title: "Gadget Haven",
-      description: "Explore the latest gadgets with details.",
+      title: "RoktoKhoj",
+      description: "A platform that connects blood donors and recipients.",
       technologies: [
         { name: "React", icon: <FaReact /> },
         { name: "Firebase", icon: <SiFirebase /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-        { name: "DaisyUI", icon: <SiDaisyui /> },
+        { name: "Node.js", icon: <DiNodejs /> },
+        { name: "MongoDB", icon: <DiMongodb /> },
       ],
-      link: "https://gadgets-haven-5598.surge.sh",
-      repo: "https://github.com/yeaminstudent5598/Gadget-Haven",
-      image: "https://i.ibb.co.com/ww2g08B/Screenshot-60.png",
+      link: "https://roktokhoj.web.app/",
+      repo: "https://github.com/yeaminstudent5598/roktokhoj-client-side.git",
+      image: "https://i.ibb.co.com/N6m8Mk2F/image.png",
     },
   ];
-
+ 
   return (
     <section id="projects" className="py-12 px-10 bg-gray-900 text-white">
       <h2 className="text-3xl text-center font-bold mb-8">My Projects</h2>
