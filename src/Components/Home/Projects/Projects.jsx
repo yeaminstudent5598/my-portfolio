@@ -50,7 +50,7 @@ const Projects = () => {
       image: "https://i.ibb.co.com/N6m8Mk2F/image.png",
     },
   ];
- 
+  
   return (
     <section id="projects" className="py-12 px-10 bg-gray-900 text-white">
       <h2 className="text-3xl text-center font-bold mb-8">My Projects</h2>
