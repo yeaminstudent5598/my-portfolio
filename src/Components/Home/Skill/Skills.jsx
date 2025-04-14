@@ -5,13 +5,17 @@ import {
 } from 'react-icons/fa';
 import { 
     SiJavascript, SiMongodb, SiExpress, 
-    SiTailwindcss, SiDaisyui, SiFramer 
+    SiTailwindcss, SiDaisyui, SiFramer, 
+    SiNextdotjs,
+    SiTypescript
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
     const skills = [
         { name: 'React', level: 'Expert', icon: <FaReact className="text-blue-500 text-5xl mb-4" /> },
+        { name: 'Next.js', level: 'Advanced', icon: <SiNextdotjs            className="text-white text-5xl mb-4" /> },
+        { name: 'TypeScript', level: 'Advanced', icon: <SiTypescript className="text-blue-400 text-5xl mb-4" /> },
         { name: 'Firebase', level: 'Advanced', icon: <FaFire className="text-orange-500 text-5xl mb-4" /> },
         { name: 'Node.js', level: 'Advanced', icon: <FaNodeJs className="text-green-500 text-5xl mb-4" /> },
         { name: 'JavaScript', level: 'Expert', icon: <SiJavascript className="text-yellow-500 text-5xl mb-4" /> },
@@ -27,6 +31,7 @@ const Skills = () => {
         { name: 'Pixso', level: 'Advanced', icon: <FaFigma className="text-green-500 text-5xl mb-4" /> },
         { name: 'WordPress', level: 'Advanced', icon: <FaWordpress className="text-blue-700 text-5xl mb-4" /> },
     ];
+    
 
     return (
         <div className="bg-gray-900 pt-32 py-16 px-6 md:px-12">

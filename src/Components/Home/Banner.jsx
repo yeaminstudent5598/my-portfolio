@@ -32,10 +32,10 @@ const Banner = () => {
         </motion.p>
         {/* Social Icons */}
         <motion.div className="flex gap-6 mt-4">
-          {[{ icon: <FaTwitter size={24} />, link: "https://twitter.com" },
-            { icon: <FaLinkedin size={24} />, link: "https://linkedin.com" },
-            { icon: <FaGithub size={24} />, link: "https://github.com" },
-            { icon: <FaInstagram size={24} />, link: "https://instagram.com" },
+          {[{ icon: <FaTwitter size={24} />, link: "https://x.com/HridoyKnow28180" },
+            { icon: <FaLinkedin size={24} />, link: "https://www.linkedin.com/in/yeamin-madbor-83b3302b8/" },
+            { icon: <FaGithub size={24} />, link: "https://github.com/yeaminstudent5598" },
+           
           ].map(({ icon, link }, i) => (
             <motion.a
               key={i}
