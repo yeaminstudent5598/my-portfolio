@@ -36,7 +36,7 @@ const Service = () => {
               <i className="fas fa-users-cog text-3xl"></i> {/* Icon */}
             </div>
             <h2 className="text-2xl font-semibold">Consulting</h2>
-          </div>
+          </div> 
           <p className="text-gray-600 mb-6">Providing expert advice on React, Firebase, Node.js, and more to help you achieve success in your projects.</p>
           <button className="btn btn-outline btn-accent w-full">Learn More</button>
         </div>
