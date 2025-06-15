@@ -45,7 +45,7 @@ const Footer = () => {
             <a href="https://github.com/yeaminstudent5598" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
               <FaGithub size={28} />
             </a>
-            <a href="https://instagram.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/muhammad_yeamin_hossain_madbor/" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={28} />
             </a>
           </div>
