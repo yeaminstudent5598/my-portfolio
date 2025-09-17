@@ -1,0 +1,17 @@
+/* Gradient animation for background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradientBG {
+  background: linear-gradient(270deg, #1e3a8a, #0ea5e9, #9333ea);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Rainbow border for RGB Halo */
+.border-gradient-rainbow {
+  border-image: linear-gradient(45deg, #f97316, #3b82f6, #9333ea, #10b981, #f59e0b) 1;
+}
