@@ -106,7 +106,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full object-cover aspect-video transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="w-full h-70  aspect-video transition-transform duration-500 ease-in-out group-hover:scale-105"
                   />
                 </div>
               </div>
