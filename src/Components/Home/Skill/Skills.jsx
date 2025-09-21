@@ -49,11 +49,11 @@ const Skills = () => {
         {Object.keys(skillCategories).map((category, idx) => (
           <div key={idx}>
             <h3 className="text-2xl font-semibold text-white mb-6">{category}</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
               {skillCategories[category].map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="box text-white text-center p-6 shadow-xl transition-shadow duration-300"
+                  className="box text-white text-center p-6 shadow-xl  transition-shadow duration-300"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
