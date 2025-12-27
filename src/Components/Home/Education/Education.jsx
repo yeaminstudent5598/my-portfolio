@@ -1,130 +1,108 @@
 import React from 'react';
+import { FiBook, FiAward, FiCalendar } from 'react-icons/fi';
 
 const Education = () => {
   const educationDetails = [
     {
       degree: "SSC",
       school: "Domsar J.C. Institution School & College",
-      year: "Year: 2021",
-      gpa: "GPA: 3.00",
+      year: "2021",
+      gpa: "3.00",
       stream: "Science",
+      subjects: ["Physics", "Chemistry", "Biology", "Mathematics"]
     },
     {
       degree: "HSC",
       school: "Mazid Jarina Foundation School & College",
-      year: "Year: 2023",
-      gpa: "GPA: 3.50",
+      year: "2023",
+      gpa: "3.50",
       stream: "Humanities",
+      subjects: ["English", "Bengali", "History", "Sociology", "Geography"]
     },
   ];
 
   return (
-    <section className="min-h-screen bg-[#0f1629] py-40">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="space-y-8">
+    <section id="education" className="py-20 md:py-28 bg-gray-900 text-white">
+      <div className="px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
+              Education
+            </span>
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Building a strong foundation through quality education
+          </p>
+        </div>
+
+        {/* Education Cards */}
+        <div className="space-y-8 md:space-y-10">
           {educationDetails.map((edu, index) => (
             <div
               key={index}
-              className="relative group border-2 rounded-xl transition-all duration-500 border-blue-400"
+              className="group relative border border-gray-700 rounded-2xl transition-all duration-500 hover:border-emerald-500/50 bg-gray-800/30 hover:bg-gray-800/50"
             >
-              <div className="relative rounded-lg bg-[#0f1629] p-8 transition-all duration-300 hover:bg-[#1a243a]">
-                {/* Button group (red, yellow, green) */}
-                <div className="flex justify-start gap-2 absolute top-3 left-3">
-                  <button className="w-2.5 h-2.5 bg-red-500 rounded-full transition-all hover:bg-red-600"></button>
-                  <button className="w-2.5 h-2.5 bg-yellow-400 rounded-full transition-all hover:bg-yellow-500"></button>
-                  <button className="w-2.5 h-2.5 bg-green-500 rounded-full transition-all hover:bg-green-600"></button>
+              {/* Window Controls */}
+              <div className="flex justify-start gap-2 absolute top-4 left-4">
+                <div className="w-3 h-3 bg-red-500 rounded-full hover:bg-red-600 transition-all"></div>
+                <div className="w-3 h-3 bg-yellow-400 rounded-full hover:bg-yellow-500 transition-all"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full hover:bg-green-600 transition-all"></div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 md:p-10">
+                {/* Featured Label */}
+                <div className="mb-6 text-emerald-400 text-xs font-bold tracking-widest uppercase">
+                  📚 Featured Education
                 </div>
 
-                {/* Featured Education Label */}
-                <div className="mb-2 text-emerald-500 text-sm font-medium tracking-wide">
-                  FEATURED EDUCATION
-                </div>
-
-                {/* Education details */}
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl">📘</span>
-                      <h3 className="text-2xl font-bold text-slate-200">{edu.degree}</h3>
-                    </div>
-                    <p className="text-lg text-slate-400 flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-star w-5 h-5 text-teal-500"
-                      >
-                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                      </svg>
+                {/* Main Info */}
+                <div className="space-y-6">
+                  {/* Degree & School */}
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 flex items-center gap-3">
+                      <FiBook className="text-emerald-400" size={32} />
+                      {edu.degree}
+                    </h3>
+                    <p className="text-lg text-emerald-300 flex items-center gap-2 mb-2">
+                      <span className="text-cyan-400">★</span>
                       {edu.school}
                     </p>
-                    <p className="text-slate-500 flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-calendar w-4 h-4"
-                      >
-                        <path d="M8 2v4"></path>
-                        <path d="M16 2v4"></path>
-                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                        <path d="M3 10h18"></path>
-                      </svg>
-                      {edu.year}
-                    </p>
                   </div>
-                </div>
 
-                {/* Tags */}
-                <div className="mt-6">
-                  <div className="flex flex-wrap gap-2">
-                    <div className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-500 hover:bg-teal-500/20 transition-colors duration-300 flex items-center gap-2 text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-award w-4 h-4"
-                      >
-                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
-                        <circle cx="12" cy="8" r="6"></circle>
-                      </svg>
-                      <span>{edu.gpa}</span>
+                  {/* Year & GPA */}
+                  <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <FiCalendar className="text-cyan-400" size={20} />
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wide">Year</p>
+                        <p className="text-lg font-semibold">{edu.year}</p>
+                      </div>
                     </div>
-                    <div className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-500 hover:bg-teal-500/20 transition-colors duration-300 flex items-center gap-2 text-sm">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-award w-4 h-4"
-                      >
-                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
-                        <circle cx="12" cy="8" r="6"></circle>
-                      </svg>
-                      <span>Stream: {edu.stream}</span>
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <FiAward className="text-emerald-400" size={20} />
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wide">GPA</p>
+                        <p className="text-lg font-semibold">{edu.gpa}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stream & Subjects */}
+                  <div className="pt-6 border-t border-gray-700">
+                    <p className="text-sm text-gray-400 mb-4">
+                      <span className="font-semibold text-gray-300">Stream:</span> {edu.stream}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {edu.subjects.map((subject, idx) => (
+                        <span
+                          key={idx}
+                          className="px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-sm font-medium hover:bg-emerald-500/20 transition-colors"
+                        >
+                          {subject}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -132,16 +110,15 @@ const Education = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center text-white pt-20">
-  <div className="flex items-center space-x-4">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"></div>
-    <p className="text-lg font-semibold">New education is loading...</p>
-  </div>
-  <div className="mt-6 text-center">
-    <p className="text-sm text-gray-400">Stay tuned!</p>
-  </div>
-</div>
 
+        {/* Coming Soon Section */}
+        <div className="mt-16 md:mt-20 p-10 rounded-2xl border border-gray-700 bg-gray-800/30 text-center">
+          <div className="flex justify-center mb-4">
+            <div className="animate-spin rounded-full h-10 w-10 border-2 border-emerald-400 border-t-cyan-500"></div>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">More to Come</h3>
+          <p className="text-gray-400">Currently pursuing higher education. Stay tuned for updates! 🚀</p>
+        </div>
       </div>
     </section>
   );
