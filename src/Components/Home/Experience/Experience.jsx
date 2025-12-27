@@ -32,7 +32,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-12 bg-gray-900 text-white">
       <h2 className="text-3xl text-center font-bold mb-8">My Experience</h2>
-      <div className="max-w-6xl mx-auto space-y-8">
+      <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div
             key={index}
