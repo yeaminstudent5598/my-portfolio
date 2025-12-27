@@ -1,43 +1,47 @@
-// File: components/Projects.jsx
 import React from 'react';
-import { FaReact } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiNodejs, DiMongodb } from 'react-icons/di';
-import { SiExpress, SiTailwindcss, SiFirebase, SiDaisyui } from 'react-icons/si';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { SiExpress, SiTailwindcss, SiFirebase, SiDaisyui, SiNextdotjs, SiPostgresql, SiPrisma, SiShadcnui } from 'react-icons/si';
+import { FiExternalLink, FiGithub, FiInfo, FiLock } from 'react-icons/fi';
 
 const Projects = () => {
   const projects = [
     {
-      title: "CrowdCube",
-      description: "Crowdfunding platform for startups to raise capital.",
+      id: "guptodhan",
+      title: "Guptodhan - Integrated Multi-Module Platform",
+      description: "A massive unified platform integrating four distinct pillars: Multi-Vendor E-commerce, C2C Buy & Sell, On-Demand Professional Services, and a Donation Module. Features role-based panels for users, vendors, and service providers.",
       technologies: [
-        { name: "React", icon: <FaReact /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
         { name: "Node.js", icon: <DiNodejs /> },
         { name: "MongoDB", icon: <DiMongodb /> },
         { name: "Express", icon: <SiExpress /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-        { name: "DaisyUI", icon: <SiDaisyui /> },
       ],
-      link: "https://crowdcube-1ddbb.web.app/",
-      repo: "https://github.com/yeaminstudent5598/Crowd-funding-client-side",
-      image: "https://i.ibb.co/SDrCzd7y/Whats-App-Image-2025-09-17-at-17-38-53-dffbc6f4.jpg",
+      link: "https://www.guptodhandigital.com/", 
+      repo: "#",
+      isPrivate: true,
+      hasDetails: true,
+      image: "https://i.ibb.co.com/PG8vqsBb/www-guptodhandigital-com-3.png", 
     },
     {
-      title: "TaskHub",
-      description: "A study management app for students.",
+      id: "vistara",
+      title: "Vistara - Local Guide Platform",
+      description: "A full-stack platform connecting travelers with local guides. Features role-based dashboards, secure booking with SSLCommerz, and interactive reviews.",
       technologies: [
-        { name: "React", icon: <FaReact /> },
-        { name: "Node.js", icon: <DiNodejs /> },
-        { name: "MongoDB", icon: <DiMongodb /> },
-        { name: "Express", icon: <SiExpress /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-        { name: "DaisyUI", icon: <SiDaisyui /> },
+        { name: "Next.js 16", icon: <SiNextdotjs /> },
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "Prisma", icon: <SiPrisma /> },
+        { name: "Shadcn UI", icon: <SiShadcnui /> },
       ],
-      link: "https://task-hub-e1fcb.web.app/",
-      repo: "https://github.com/yeaminstudent5598/task-hub-client-side",
-      image: "https://i.ibb.co/F4V7cY9z/Whats-App-Image-2025-09-17-at-17-37-25-f37a1332.jpg",
+      link: "https://local-guide-platform.vercel.app/",
+      repo: "https://github.com/yeaminstudent5598/local-guide-platform",
+      isPrivate: false,
+      hasDetails: false,
+      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop", 
     },
     {
+      id: "roktokhoj",
       title: "RoktoKhoj",
       description: "A platform that connects blood donors and recipients.",
       technologies: [
@@ -48,40 +52,46 @@ const Projects = () => {
       ],
       link: "https://roktokhoj.web.app/",
       repo: "https://github.com/yeaminstudent5598/roktokhoj-client-side.git",
+      isPrivate: false,
+      hasDetails: false,
       image: "https://i.ibb.co/N6m8Mk2F/image.png",
     },
     {
+      id: "amar-shodai",
       title: "Amar Shodai",
-      description: "An e-commerce platform for managing and selling fish and aquatic products online with an intuitive admin dashboard.",
+      description: "A fully dynamic e-commerce platform built for organic and specialty product sellers. Features inventory management, dynamic product categorization, seller dashboard, and order management. Designed to be easily customizable for any type of product business.",
       technologies: [
         { name: "React", icon: <FaReact /> },
         { name: "Firebase", icon: <SiFirebase /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
       ],
-      link: "https://ready-fish-farm.netlify.app/",
+      link: "https://pro-ecommerce-iota.vercel.app/",
       repo: "https://github.com/yeaminstudent5598/ready-fish-farm.git",
-      image: "https://i.ibb.co/0pvVK2p1/Whats-App-Image-2025-09-17-at-17-41-49-8ba3fe82.jpg",
+      isPrivate: false,
+      hasDetails: false,
+      image: "https://i.ibb.co.com/0pvVK2p1/Whats-App-Image-2025-09-17-at-17-41-49-8ba3fe82.jpg",
     },
     {
+      id: "parcel-go",
       title: "Parcel Go",
-      description: "Delivery management platform connecting senders and couriers, with real-time tracking and seamless logistics.",
+      description: "Delivery management platform connecting senders and couriers with real-time tracking.",
       technologies: [
         { name: "React", icon: <FaReact /> },
         { name: "Node.js", icon: <DiNodejs /> },
         { name: "Firebase", icon: <SiFirebase /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
         { name: "Express", icon: <SiExpress /> },
       ],
       link: "https://parcel-go.vercel.app/",
       repo: "https://github.com/yeaminstudent5598/parcel-go.git",
-      image: "https://i.ibb.co.com/9HhLcb7K/Whats-App-Image-2025-09-17-at-17-59-39-6e0f717a.jpg", // Replace with actual screenshot if you have one
+      isPrivate: false,
+      hasDetails: false,
+      image: "https://i.ibb.co.com/9HhLcb7K/Whats-App-Image-2025-09-17-at-17-59-39-6e0f717a.jpg",
     }
   ];
 
   return (
     <section id="projects" className="py-16 md:py-20 bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
@@ -89,67 +99,86 @@ const Projects = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Here's a detailed look at some of my work.
+            Showcasing integrated solutions and modern web applications.
           </p>
         </div>
 
-        {/* Project List */}
         <div className="space-y-16 md:space-y-24">
           {projects.map((project, index) => (
             <article 
               key={index} 
               className="group grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
             >
-              {/* Image Column */}
               <div className={`relative w-full ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                <div className="overflow-hidden rounded-lg shadow-xl border border-gray-700">
+                <div className="overflow-hidden rounded-xl shadow-2xl border border-gray-700 bg-gray-800">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-70  aspect-video transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="w-full h-full object-top transition-transform duration-700 ease-in-out group-hover:scale-105"
                   />
                 </div>
               </div>
 
-              {/* Content Column */}
               <div className={`w-full ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
                 <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-cyan-400">
                   {project.title}
                 </h3>
-                <p className="text-base lg:text-lg text-gray-400 mb-6">
+                <p className="text-base lg:text-lg text-gray-400 mb-6 leading-relaxed">
                   {project.description}
+                  {project.isPrivate && (
+                    <span className="block mt-2 text-sm text-amber-400 italic">
+                      Note: Source code is private as this is a commercial project.
+                    </span>
+                  )}
                 </p>
 
-                {/* Technology Pills */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {project.technologies.map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-emerald-400 to-cyan-500 text-gray-900 shadow-md transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                      className="flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-gray-800 border border-gray-700 text-emerald-400"
                     >
                       {tech.icon} {tech.name}
                     </div>
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-lg shadow-sm hover:from-emerald-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-lg"
                   >
-                    <FiExternalLink /> Live Site
+                    <FiExternalLink size={18} /> Live Site
                   </a>
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:gap-3"
-                  >
-                    <FiGithub /> View Code
-                  </a>
+                  
+                  {project.hasDetails && (
+                    <Link
+                      to={`/project/${project.id}`}
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-emerald-500 rounded-lg hover:bg-emerald-500/10 transition-all"
+                    >
+                      <FiInfo size={18} /> View Details
+                    </Link>
+                  )}
+
+                  {project.isPrivate ? (
+                    <button
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-500 border border-gray-700 rounded-lg cursor-not-allowed"
+                      title="Source code is private for company project"
+                    >
+                      <FiLock size={18} /> Private Code
+                    </button>
+                  ) : (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-gray-600 rounded-lg"
+                    >
+                      <FiGithub size={18} /> Code
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
