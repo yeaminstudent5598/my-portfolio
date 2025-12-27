@@ -1,22 +1,34 @@
 import { motion } from 'framer-motion';
+import { FiDownload } from 'react-icons/fi';
+
 const DawnloadResume = () => {
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/MyResume.pdf'; // Make sure MyResume.pdf is in public folder
+        link.download = 'Yeamin_Madbor_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
-        <div>
-            <a href="MyResume.pdf" download="MyResume.pdf">
-       <motion.button
-          className="btn mt-8 btn-outline border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white rounded-full"
-          whileHover={{ scale: 1.15, boxShadow: "0px 0px 15px #60a5fa" }}
-          transition={{
-    duration: 0.6,
-    delay: 0.2, // Fixed delay
-    type: "spring",
-    stiffness: 250,
-  }}
+        <motion.button
+            onClick={handleDownload}
+            className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-gray-900 font-extrabold rounded-2xl flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-2xl"
+            whileHover={{ 
+                scale: 1.08, 
+                boxShadow: "0 0 30px rgba(16, 185, 129, 0.4)" 
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{
+                duration: 0.3,
+                type: "spring",
+                stiffness: 250,
+            }}
         >
-          Download Resume
+            <FiDownload size={20} strokeWidth={3} />
+            Download Resume
         </motion.button>
-       </a>
-        </div>
     );
 };
 
