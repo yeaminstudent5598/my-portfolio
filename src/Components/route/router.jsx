@@ -11,6 +11,8 @@ import Pages from "../pages/Pages";
 import Projects from "../Home/Projects/Projects";
 import Education from "../Home/Education/Education";
 import Skills from "../Home/Skill/Skills";
+import ProjectDetails from "../Home/Projects/ProjectDetails";
+import EducationBackground from "../Home/Education/Education";
 
 
 const router = createBrowserRouter([
@@ -39,17 +41,18 @@ const router = createBrowserRouter([
             element: <Pages/>
         },
         {
-          path: '/education',
-          element: <Education/>,
-        },
-        {
           path: '/skills',
           element: <Skills/>,
         },
         {
           path: '/projects',
           element: <Projects/>
-        }
+        },
+        {
+          path: '/project/guptodhan',
+          element: <ProjectDetails/>
+        },
+        
       ]
     },
   ]);
