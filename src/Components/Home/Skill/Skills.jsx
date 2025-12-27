@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaFire, FaFigma, FaCode, FaWordpress, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiDaisyui, SiFramer, SiNextdotjs, SiTypescript, SiRedux, SiPostgresql, SiPrisma } from 'react-icons/si';
+import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiDaisyui, SiFramer, SiNextdotjs, SiTypescript, SiRedux, SiPostgresql, SiPrisma, SiPostman } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -31,11 +31,12 @@ const Skills = () => {
     "Tools": [
       { name: 'Git & GitHub', level: 'Advanced', icon: <FaGitAlt className="text-red-500 text-5xl" /> },
       { name: 'VS Code', level: 'Expert', icon: <FaCode className="text-blue-600 text-5xl" /> },
+      { name: 'Postman', level: 'Advanced', icon: <SiPostman className="text-orange-400 text-5xl" /> },
       { name: 'WordPress', level: 'Advanced', icon: <FaWordpress className="text-blue-700 text-5xl" /> },
     ],
-    "DevOps": [
-      { name: 'Docker', level: 'Intermediate', icon: <FaDocker className="text-blue-400 text-5xl" /> },
-    ]
+    // "DevOps": [
+    //   { name: 'Docker', level: 'Intermediate', icon: <FaDocker className="text-blue-400 text-5xl" /> },
+    // ]
   };
 
   return (
