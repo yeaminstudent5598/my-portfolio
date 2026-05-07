@@ -1,115 +1,111 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaCode, FaRocket, FaCheckCircle } from 'react-icons/fa';
-import { FiArrowRight, FiDownload } from 'react-icons/fi';
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FiArrowRight } from 'react-icons/fi';
 import DawnloadResume from './DawnloadResume';
 
 const Banner = () => {
   const socialLinks = [
-    { icon: <FaTwitter size={20} />, link: "https://x.com/HridoyKnow28180", label: "Twitter" },
-    { icon: <FaLinkedin size={20} />, link: "https://www.linkedin.com/in/yeamin-madbor-83b3302b8/", label: "LinkedIn" },
-    { icon: <FaGithub size={20} />, link: "https://github.com/yeaminstudent5598", label: "GitHub" },
-    { icon: <FaInstagram size={20} />, link: "https://www.instagram.com/muhammad_yeamin_hossain_madbor/", label: "Instagram" },
+    { icon: <FaTwitter size={16} />, link: "https://x.com/yeaminstudent55", label: "Twitter" },
+    { icon: <FaLinkedin size={16} />, link: "https://www.linkedin.com/in/yeamin-madbor-83b3302b8/", label: "LinkedIn" },
+    { icon: <FaGithub size={16} />, link: "https://github.com/yeaminstudent5598", label: "GitHub" },
+    { icon: <FaInstagram size={16} />, link: "https://www.instagram.com/muhammad_yeamin_hossain_madbor/", label: "Instagram" },
   ];
 
   const stats = [
-    { label: 'Projects Done', value: '15+', icon: <FaCheckCircle className="text-emerald-400" /> },
-    { label: 'Experience', value: '1+ Year', icon: <FaRocket className="text-cyan-400" /> },
-    { label: 'Tech Stack', value: 'MERN', icon: <FaCode className="text-blue-400" /> },
+    { label: 'Projects', value: '15+' },
+    { label: 'Experience', value: '2+ Yrs' }, // Updated here
+    { label: 'Tech Stack', value: 'MERN' },
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#0b1120] text-white overflow-hidden pt-32 md:pt-36 pb-16 md:pb-20 px-4 sm:px-6 lg:px-8">
-      {/* Background Decor */}
+    <section className="relative min-h-screen bg-gray-950 text-white overflow-hidden pt-28 pb-16 px-8">
+      {/* Background Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-1/4 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-emerald-500/10 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-cyan-500/10 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] animate-pulse delay-700"></div>
-        {/* Dot Grid Effect */}
-        <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute top-40 left-1/4 w-80 h-80 bg-emerald-500/8 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-40 right-1/4 w-80 h-80 bg-cyan-500/8 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '0.7s' }}></div>
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
       </div>
 
       <div className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[calc(100vh-140px)]">
           
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 md:space-y-8"
+            className="space-y-4"
           >
             {/* Status Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-emerald-500/30 backdrop-blur-md w-fit"
             >
-              <span className="relative flex h-2 sm:h-3 w-2 sm:w-3">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-full w-full bg-emerald-500"></span>
               </span>
-              <span className="text-[10px] sm:text-xs font-bold tracking-widest text-emerald-400 uppercase">Available for opportunities</span>
+              <span className="text-xs font-bold tracking-widest text-emerald-400 uppercase">Available for opportunities</span>
             </motion.div>
 
-            {/* Main Title */}
-            <div className="space-y-2 md:space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1]">
-                Crafting <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500">
-                  Digital Mastery
+            {/* Main Heading */}
+            <div className="space-y-1">
+              <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
+                CRAFTING
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
+                  DIGITAL MASTERY
                 </span>
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-300">
-                Yeamin Madbor <span className="text-emerald-500 font-normal">|</span> Full Stack Developer
+              <p className="text-lg font-semibold text-gray-200 pt-1">
+                Yeamin Madbor <span className="text-emerald-400">|</span> Full Stack Developer
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-gray-400 max-w-xl leading-relaxed">
-              Full Stack Developer and Project Manager specializing in building scalable web applications. I transform complex ideas into production-ready platforms using modern technologies and best practices.
+            <p className="text-sm text-gray-400 max-w-md leading-relaxed">
+              Full Stack Developer and Project Manager specializing in building scalable web applications. I transform complex ideas into production-ready platforms using modern technologies.
             </p>
 
-            {/* CTA & Resume */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-3">
               <motion.a
                 href="#projects"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(16, 185, 129, 0.4)" }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-gray-900 font-extrabold rounded-2xl flex items-center justify-center sm:justify-start gap-2 transition-all shadow-xl text-sm sm:text-base"
+                className="px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-gray-900 font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-emerald-500/30 text-sm w-fit"
               >
-                Explore Projects <FiArrowRight strokeWidth={3} />
+                Explore Projects <FiArrowRight size={16} strokeWidth={3} />
               </motion.a>
 
-              <div className="mt-0 sm:mt-0">
-                <DawnloadResume />
-              </div>
+              <DawnloadResume />
             </div>
 
-            {/* Stats Bar */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-white/5">
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col">
-                  <span className="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] sm:text-xs text-gray-500 font-bold uppercase tracking-wider">{stat.label}</span>
+                  <span className="text-xl font-black text-white">{stat.value}</span>
+                  <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">{stat.label}</span>
                 </div>
               ))}
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3 sm:gap-5 pt-4 sm:pt-6 flex-wrap">
-              <span className="text-xs sm:text-sm text-gray-400 font-semibold">Follow:</span>
-              <div className="flex gap-2 sm:gap-3">
+            <div className="flex items-center gap-3 pt-6 flex-wrap">
+              <span className="text-xs text-gray-400 font-semibold">Follow:</span>
+              <div className="flex gap-2">
                 {socialLinks.map(({ icon, link, label }, index) => (
                   <motion.a
                     key={index}
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ y: -5, color: '#10b981' }}
+                    whileHover={{ y: -3, scale: 1.08 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-2 sm:p-3 bg-gray-800/50 rounded-xl border border-white/5 text-gray-400 transition-all hover:border-emerald-500/50 text-sm sm:text-base"
+                    className="p-2.5 bg-gray-800/40 rounded-lg border border-white/10 text-gray-400 hover:text-emerald-400 hover:border-emerald-500/50 transition-all"
                     title={label}
                   >
                     {icon}
@@ -119,52 +115,64 @@ const Banner = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Visuals */}
-          <div className="relative flex justify-center mt-8 lg:mt-0">
-            {/* Geometric Shapes Behind Image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
-            
+          {/* Right Content - Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 40 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative pb-36 flex lg:justify-end justify-center items-center order-first lg:order-last h-full"
+          >
+            {/* Glow Background */}
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="absolute w-80 h-96 bg-gradient-to-br from-emerald-500/10 via-cyan-500/5 to-transparent rounded-full blur-3xl"></div>
+            </div>
+
+            {/* Image Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="relative z-10"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 5, repeat: Infinity }}
+              className="relative z-20"
             >
-              {/* Glass Frame for Image */}
-              <div className="relative p-2 sm:p-3 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl rounded-[30px] sm:rounded-[40px] border border-white/20 shadow-2xl">
-                <img
-                  src="https://i.ibb.co.com/gFZkttXX/20231124-163457-jpg.jpg"
-                  alt="Yeamin Madbor"
-                  className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-[24px] sm:rounded-[32px] grayscale hover:grayscale-0 transition-all duration-700"
-                />
-                
-                {/* Floating "Developer" Badge */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 4 }}
-                  className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 p-3 sm:p-4 bg-gray-900 border border-emerald-500/30 rounded-xl sm:rounded-2xl shadow-xl backdrop-blur-xl"
-                >
-                  <div className="text-center">
-                    <p className="text-[8px] sm:text-[10px] text-emerald-400 font-bold uppercase tracking-tighter">Full Stack</p>
-                    <p className="text-xs sm:text-sm font-black text-white">Developer</p>
-                  </div>
-                </motion.div>
+              {/* Glass Frame */}
+              <div className="relative p-1.5 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-3xl rounded-3xl border border-white/80 shadow-2xl overflow-hidden">
+                <div className="relative rounded-[26px] overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900">
+                  <img
+                    src="https://i.ibb.co.com/LyZzG6p/yeamin-1.png"
+                    alt="Yeamin Madbor"
+                    className="w-64 h-auto "
+                  />
+                </div>
               </div>
 
-              {/* Experience Tag */}
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 1 }}
-                className="absolute -bottom-6 sm:-bottom-8 -left-6 sm:-left-10 p-3 sm:p-5 bg-emerald-500 rounded-2xl sm:rounded-3xl shadow-2xl shadow-emerald-500/20 text-gray-900"
+              {/* Full Stack Badge */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute -top-3 -right-3 z-30"
               >
-                <div className="flex flex-col items-center">
-                  <span className="text-2xl sm:text-3xl font-black">1+</span>
-                  <span className="text-[9px] sm:text-[10px] font-bold uppercase leading-none text-center">Years<br/>Experience</span>
+                <div className="px-3 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl shadow-lg shadow-emerald-500/40 border border-emerald-400/60 backdrop-blur-xl">
+                  <div className="text-center">
+                    <p className="text-[8px] font-bold uppercase tracking-tight text-white">Full Stack</p>
+                    <p className="text-xs font-black text-white">Developer</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Experience Badge */}
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, delay: 0.3 }}
+                className="absolute -bottom-3 -left-3 z-30"
+              >
+                <div className="px-3.5 py-2.5 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl shadow-lg shadow-cyan-500/40 border border-cyan-400/60">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-black text-white">2+</span> {/* Updated here */}
+                    <span className="text-[8px] font-bold uppercase leading-tight text-white">Yrs Exp</span>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
