@@ -1,12 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaBrain } from 'react-icons/fa';
 import { DiNodejs, DiMongodb } from 'react-icons/di';
-import { SiExpress, SiTailwindcss, SiFirebase, SiDaisyui, SiNextdotjs, SiPostgresql, SiPrisma, SiShadcnui } from 'react-icons/si';
+import { 
+  SiExpress, SiTailwindcss, SiFirebase, SiDaisyui, SiNextdotjs, 
+  SiPostgresql, SiPrisma, SiShadcnui, SiPython, SiFastapi, SiRedis, SiFramer
+} from 'react-icons/si';
 import { FiExternalLink, FiGithub, FiInfo, FiLock } from 'react-icons/fi';
 
 const Projects = () => {
   const projects = [
+    {
+      id: "modasource",
+      title: "Moda Source International - Global Sourcing Platform",
+      description: "A premium corporate platform for a global apparel sourcing agency. Features a sophisticated UI with supply chain visualization, dynamic service modules, and high-performance optimization for international B2B clients.",
+      technologies: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "Framer Motion", icon: <SiFramer /> },
+        { name: "TypeScript", icon: <SiNextdotjs /> }, // Standard icon for TS logic
+      ],
+      link: "https://www.modasourceinternational.com/", 
+      repo: "#",
+      isPrivate: true,
+      hasDetails: true,
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop", 
+    },
+    {
+      id: "outreach-ai",
+      title: "OutreachAI - B2B Cold Email SaaS",
+      description: "An AI-powered B2B SaaS platform for autonomous cold email outreach and lead generation. Features multi-agent pipelines for lead scraping, Google Gemini integration for personalized emails, and BullMQ/Redis for scalable background processing.",
+      technologies: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Python", icon: <SiPython /> },
+        { name: "FastAPI", icon: <SiFastapi /> },
+        { name: "Redis", icon: <SiRedis /> },
+        { name: "Gemini AI", icon: <FaBrain /> },
+      ],
+      link: "https://outreachai-beta.vercel.app/", 
+      repo: "#",
+      isPrivate: true,
+      hasDetails: true,
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", 
+    },
     {
       id: "guptodhan",
       title: "Guptodhan - Integrated Multi-Module Platform",
@@ -18,11 +54,11 @@ const Projects = () => {
         { name: "Express", icon: <SiExpress /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
       ],
-      link: "https://www.guptodhandigital.com/", 
+      link: "https://www.guptodhan.com/", 
       repo: "#",
       isPrivate: true,
       hasDetails: true,
-      image: "https://i.ibb.co.com/PG8vqsBb/www-guptodhandigital-com-3.png", 
+      image: "https://i.ibb.co.com/PG8vqsBb/www-guptodhan-com-3.png", 
     },
     {
       id: "vistara",
@@ -59,7 +95,7 @@ const Projects = () => {
     {
       id: "amar-shodai",
       title: "Amar Shodai",
-      description: "A fully dynamic e-commerce platform built for organic and specialty product sellers. Features inventory management, dynamic product categorization, seller dashboard, and order management. Designed to be easily customizable for any type of product business.",
+      description: "A fully dynamic e-commerce platform built for organic and specialty product sellers. Features inventory management, dynamic product categorization, seller dashboard, and order management.",
       technologies: [
         { name: "React", icon: <FaReact /> },
         { name: "Firebase", icon: <SiFirebase /> },
@@ -90,17 +126,15 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-20 bg-gray-900 text-white">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 md:py-20 bg-[#0b1120] text-white">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
-              Featured Projects
-            </span>
+          <h2 className="text-sm font-bold tracking-[0.2em] text-emerald-400 uppercase mb-4">
+            Portfolio
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Showcasing integrated solutions and modern web applications.
-          </p>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            Featured Projects
+          </h3>
         </div>
 
         <div className="space-y-16 md:space-y-24">
@@ -110,24 +144,24 @@ const Projects = () => {
               className="group grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
             >
               <div className={`relative w-full ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                <div className="overflow-hidden rounded-xl shadow-2xl border border-gray-700 bg-gray-800">
+                <div className="overflow-hidden rounded-2xl shadow-2xl border border-white/10 bg-gray-800/50 backdrop-blur-sm">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-top transition-transform duration-700 ease-in-out group-hover:scale-105"
+                    className="w-full h-full object-top transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   />
                 </div>
               </div>
 
               <div className={`w-full ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-cyan-400">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-emerald-400">
                   {project.title}
                 </h3>
                 <p className="text-base lg:text-lg text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                   {project.isPrivate && (
-                    <span className="block mt-2 text-sm text-amber-400 italic">
-                      Note: Source code is private as this is a commercial project.
+                    <span className="block mt-3 text-sm font-medium text-amber-400/80 italic">
+                      * Source code is private as this is a commercial project.
                     </span>
                   )}
                 </p>
@@ -136,7 +170,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-gray-800 border border-gray-700 text-emerald-400"
+                      className="flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400"
                     >
                       {tech.icon} {tech.name}
                     </div>
@@ -148,7 +182,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-lg"
+                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-xl hover:shadow-lg hover:shadow-emerald-500/20 transition-all"
                   >
                     <FiExternalLink size={18} /> Live Site
                   </a>
@@ -156,7 +190,7 @@ const Projects = () => {
                   {project.hasDetails && (
                     <Link
                       to={`/project/${project.id}`}
-                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-emerald-500 rounded-lg hover:bg-emerald-500/10 transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-white/20 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <FiInfo size={18} /> View Details
                     </Link>
@@ -164,7 +198,7 @@ const Projects = () => {
 
                   {project.isPrivate ? (
                     <button
-                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-500 border border-gray-700 rounded-lg cursor-not-allowed"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-gray-500 border border-white/10 bg-white/5 rounded-xl cursor-not-allowed"
                       title="Source code is private for company project"
                     >
                       <FiLock size={18} /> Private Code
@@ -174,7 +208,7 @@ const Projects = () => {
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-gray-600 rounded-lg"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-white/20 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <FiGithub size={18} /> Code
                     </a>
