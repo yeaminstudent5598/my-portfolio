@@ -1,42 +1,55 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaFire, FaFigma, FaCode, FaWordpress, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiDaisyui, SiFramer, SiNextdotjs, SiTypescript, SiRedux, SiPostgresql, SiPrisma, SiPostman } from 'react-icons/si';
+import { 
+  FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaFire, FaFigma, FaCode, FaBrain, FaRobot, FaUbuntu, FaServer 
+} from 'react-icons/fa';
+import { 
+  SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiDaisyui, SiFramer, 
+  SiNextdotjs, SiTypescript, SiRedux, SiPostgresql, SiPrisma, SiPostman, 
+  SiPython, SiFastapi, SiRedis, SiSocketdotio, SiVercel, SiNginx 
+} from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillCategories = {
     "Frontend": [
       { name: 'React', level: 'Expert', icon: <FaReact className="text-blue-500 text-5xl" /> },
-      { name: 'Next.js', level: 'Advanced', icon: <SiNextdotjs className="text-white text-5xl" /> },
+      { name: 'Next.js', level: 'Expert', icon: <SiNextdotjs className="text-white text-5xl" /> },
       { name: 'TypeScript', level: 'Advanced', icon: <SiTypescript className="text-blue-400 text-5xl" /> },
       { name: 'JavaScript', level: 'Expert', icon: <SiJavascript className="text-yellow-500 text-5xl" /> },
-      { name: 'HTML & CSS', level: 'Expert', icon: <FaHtml5 className="text-orange-600 text-5xl" /> },
       { name: 'Tailwind CSS', level: 'Expert', icon: <SiTailwindcss className="text-blue-400 text-5xl" /> },
-      { name: 'DaisyUI', level: 'Advanced', icon: <SiDaisyui className="text-pink-500 text-5xl" /> },
       { name: 'Redux Toolkit', level: 'Advanced', icon: <SiRedux className="text-purple-600 text-5xl" /> },
+      { name: 'HTML & CSS', level: 'Expert', icon: <FaHtml5 className="text-orange-600 text-5xl" /> },
+      { name: 'DaisyUI', level: 'Advanced', icon: <SiDaisyui className="text-pink-500 text-5xl" /> },
     ],
-    "Backend": [
+    "Backend & Database": [
       { name: 'Node.js', level: 'Advanced', icon: <FaNodeJs className="text-green-500 text-5xl" /> },
-      { name: 'Express', level: 'Advanced', icon: <SiExpress className="text-gray-700 text-5xl" /> },
+      { name: 'Express', level: 'Advanced', icon: <SiExpress className="text-gray-400 text-5xl" /> },
+      { name: 'Python', level: 'Intermediate', icon: <SiPython className="text-yellow-400 text-5xl" /> },
+      { name: 'FastAPI', level: 'Intermediate', icon: <SiFastapi className="text-teal-500 text-5xl" /> },
+      { name: 'PostgreSQL', level: 'Advanced', icon: <SiPostgresql className="text-blue-400 text-5xl" /> },
+      { name: 'Prisma ORM', level: 'Advanced', icon: <SiPrisma className="text-white text-5xl" /> },
       { name: 'MongoDB', level: 'Advanced', icon: <SiMongodb className="text-green-600 text-5xl" /> },
-      { name: 'PostgreSQL', level: 'Intermediate', icon: <SiPostgresql className="text-blue-500 text-5xl" /> },
-      { name: 'Prisma ORM', level: 'Intermediate', icon: <SiPrisma className="text-pink-400 text-5xl" /> },
+      { name: 'Redis', level: 'Intermediate', icon: <SiRedis className="text-red-500 text-5xl" /> },
+    ],
+    "DevOps & Deployment": [
+      { name: 'Ubuntu (VPS)', level: 'Advanced', icon: <FaUbuntu className="text-orange-500 text-5xl" /> },
+      { name: 'Nginx', level: 'Advanced', icon: <SiNginx className="text-green-500 text-5xl" /> },
+      { name: 'PM2', level: 'Advanced', icon: <FaServer className="text-blue-400 text-5xl" /> },
+      { name: 'Vercel', level: 'Advanced', icon: <SiVercel className="text-white text-5xl" /> },
+    ],
+    "AI & Automation": [
+      { name: 'Google Gemini', level: 'Advanced', icon: <FaBrain className="text-blue-400 text-5xl" /> },
+      { name: 'Prompt Engineering', level: 'Expert', icon: <FaRobot className="text-purple-400 text-5xl" /> },
+      { name: 'Socket.io', level: 'Advanced', icon: <SiSocketdotio className="text-white text-5xl" /> },
       { name: 'Firebase', level: 'Advanced', icon: <FaFire className="text-orange-500 text-5xl" /> },
     ],
-    "Design": [
-      { name: 'Figma', level: 'Advanced', icon: <FaFigma className="text-purple-500 text-5xl" /> },
-      { name: 'Pixso', level: 'Advanced', icon: <FaFigma className="text-green-500 text-5xl" /> },
-      { name: 'Framer Motion', level: 'Advanced', icon: <SiFramer className="text-pink-500 text-5xl" /> },
-    ],
-    "Tools": [
+    "Design & Tools": [
+      { name: 'Figma', level: 'Advanced', icon: <FaFigma className="text-pink-500 text-5xl" /> },
+      { name: 'Framer Motion', level: 'Advanced', icon: <SiFramer className="text-blue-500 text-5xl" /> },
       { name: 'Git & GitHub', level: 'Advanced', icon: <FaGitAlt className="text-red-500 text-5xl" /> },
       { name: 'VS Code', level: 'Expert', icon: <FaCode className="text-blue-600 text-5xl" /> },
       { name: 'Postman', level: 'Advanced', icon: <SiPostman className="text-orange-400 text-5xl" /> },
-      { name: 'WordPress', level: 'Advanced', icon: <FaWordpress className="text-blue-700 text-5xl" /> },
-    ],
-    // "DevOps": [
-    //   { name: 'Docker', level: 'Intermediate', icon: <FaDocker className="text-blue-400 text-5xl" /> },
-    // ]
+    ]
   };
 
   return (
@@ -54,7 +67,7 @@ const Skills = () => {
               {skillCategories[category].map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="box text-white text-center p-6 shadow-xl  transition-shadow duration-300"
+                  className="box text-white text-center p-6 shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
