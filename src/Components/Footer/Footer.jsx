@@ -84,7 +84,7 @@ const Footer = () => {
             </h3>
             <div className="flex gap-6">
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/yeaminstudent55" 
                 className="text-gray-400 hover:text-emerald-400 transition-all duration-300 transform hover:scale-125"
                 target="_blank" 
                 rel="noopener noreferrer"
