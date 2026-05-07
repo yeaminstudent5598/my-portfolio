@@ -4,12 +4,13 @@ import { FiTarget, FiUsers, FiCpu } from "react-icons/fi";
 
 const AboutMe = () => {
   const techStack = [
-    "Next.js", "Node.js", "MongoDB", "PostgreSQL", "Prisma", "TypeScript", "Tailwind CSS", "Framer Motion"
+    "Next.js", "React.js", "TypeScript", "Node.js", "Python (FastAPI)", 
+    "PostgreSQL", "Redis", "BullMQ", "Tailwind CSS", "Framer Motion"
   ];
 
   return (
-    <section id="about" className="bg-[#0b1120] py-24 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="bg-[#0b1120] py-24 px-6 md:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
           initial={{ opacity: 0 }}
@@ -34,8 +35,8 @@ const AboutMe = () => {
               </h3>
               <p className="text-gray-400 text-lg leading-relaxed">
                 Hi, I’m <span className="text-cyan-400 font-bold">Yeamin Madbor</span>. At <strong>Pixel & Code</strong>, 
-                I don’t just write code; I orchestrate solutions[cite: 1, 7]. As a <strong>Project Manager & Lead Backend Developer</strong>, 
-                I manage a multi-disciplinary team of 8 professionals—including Web, App, and UI/UX designers—to deliver high-performance platforms.
+                I don’t just write code; I orchestrate solutions. As a <strong>Project Manager & Full Stack Developer</strong>, 
+                I manage multi-disciplinary teams—including Web, App, and UI/UX designers—to deliver scalable, high-performance platforms.
               </p>
             </motion.div>
 
@@ -44,12 +45,12 @@ const AboutMe = () => {
               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-500/50 transition-colors">
                 <FiUsers className="text-emerald-400 text-2xl mb-4" />
                 <h4 className="text-white font-bold mb-2">Team Leadership</h4>
-                <p className="text-gray-500 text-sm">Managing 8+ developers and designers across multiple platforms.</p>
+                <p className="text-gray-500 text-sm">Managing developers and designers across multiple high-scale platforms.</p>
               </div>
               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-cyan-500/50 transition-colors">
                 <FiCpu className="text-cyan-400 text-2xl mb-4" />
-                <h4 className="text-white font-bold mb-2">Backend Expert</h4>
-                <p className="text-gray-500 text-sm">Specializing in complex schema design and scheduling logic.</p>
+                <h4 className="text-white font-bold mb-2">System Architect</h4>
+                <p className="text-gray-500 text-sm">Specializing in complex schema design, AI pipelines, and scheduling logic.</p>
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ const AboutMe = () => {
           >
             <p className="text-gray-300 text-lg">
               My core expertise lies in developing massive, unified platforms like <strong>Guptodhan</strong>, 
-              which integrates Multi-Vendor E-commerce, C2C marketplaces, and On-Demand services into a single powerful app[cite: 9, 14, 22].
+              which integrates Multi-Vendor E-commerce and Service Marketplaces, alongside building AI-powered SaaS products like <strong>OutreachAI</strong> using multi-agent pipelines.
             </p>
 
             <div className="flex flex-wrap gap-2 py-4">
